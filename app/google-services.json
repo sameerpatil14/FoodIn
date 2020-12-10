@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "312142030948",
+    "firebase_url": "https://food-in-8b03e.firebaseio.com",
+    "project_id": "food-in-8b03e",
+    "storage_bucket": "food-in-8b03e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:312142030948:android:3ed73daeb0e6fe02c69771",
+        "android_client_info": {
+          "package_name": "com.example.foodin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "312142030948-fj0ad26tkrhpjc36a0k0umrg4l4r3e87.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRtVKYaX-F8TFYzlqBkTiNFaZLV8Fph-I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "312142030948-fj0ad26tkrhpjc36a0k0umrg4l4r3e87.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

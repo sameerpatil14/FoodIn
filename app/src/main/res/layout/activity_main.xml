@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/light_green"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:transitionName="logo"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ss_logo" />
+
+        <TextView
+            android:id="@+id/foodin"
+            android:layout_width="wrap_content"
+            android:transitionName="foodin"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/aclonica"
+            android:text="FoodIn"
+            android:textSize="25sp"/>
+    </LinearLayout>
+</LinearLayout>
