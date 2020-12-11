@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -51,6 +53,8 @@ public class PlaceOrder extends AppCompatActivity {
     //Cart
     String stringTotalAmount;
     String currentTimeMillis, stringActivity;
+    RadioGroup payRadioGroup;
+    RadioButton payCod;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,7 +92,6 @@ public class PlaceOrder extends AppCompatActivity {
             //Price Details Data
             IntQuantity = Integer.parseInt(stringdeliveryQuantity);
             IntAmount = Integer.parseInt(stringFoodPrice);
-
             TotalAmount = IntQuantity * IntAmount;
         } else if (stringActivity.equals("Cart")) {
 
@@ -116,6 +119,8 @@ public class PlaceOrder extends AppCompatActivity {
         totalPayableAmount = findViewById(R.id.totalPayableAmount);
 
         buttonPlaceOder = findViewById(R.id.buttonPlaceOrder);
+        payRadioGroup = findViewById(R.id.payRadioGroup);
+        payCod = findViewById(R.id.payCod);
     }
 
     //Load Delivery Details
@@ -142,7 +147,7 @@ public class PlaceOrder extends AppCompatActivity {
     //Price Details
     private void priceDetails() {
         amount.setText(Integer.toString(TotalAmount));
-        if (TotalAmount < 100) {
+        if (TotalAmount < 50) {
             deliveryCharges.setText("35");
             TotalAmount = TotalAmount + 35;
             totalPayableAmount.setText(Integer.toString(TotalAmount));

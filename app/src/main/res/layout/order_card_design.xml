@@ -25,6 +25,7 @@
             <ImageView
                 android:id="@+id/orderImage"
                 android:layout_width="100dp"
+                android:layout_gravity="center"
                 android:layout_height="100dp"
                 android:layout_margin="5dp"
                 android:scaleType="centerCrop"
@@ -90,6 +91,29 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="999"
+                        android:textSize="16sp"
+                        android:transitionName="tPrice" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Status : "
+                        android:textSize="16sp"
+                        android:transitionName="tPrice" />
+
+                    <TextView
+                        android:id="@+id/orderStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Delivered"
                         android:textSize="16sp"
                         android:transitionName="tPrice" />
 

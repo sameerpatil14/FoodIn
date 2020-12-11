@@ -50,9 +50,12 @@ public class OrderAdapter extends FirebaseRecyclerAdapter<OrderHelperClass, Orde
         holder.orderName.setText(model.getFoodName());
         holder.orderAmount.setText("₹" + Integer.toString(tAmount));
         holder.orderQty.setText(model.getFoodQuantity());
+        holder.orderStatus.setText(model.getFoodDeliveryStatus());
 
         Glide.with(holder.orderImage.getContext()).load(model.getFoodImage()).into(holder.orderImage);
-
+        if (model.getFoodDeliveryStatus().equals("Delivered")) {
+            holder.cancelOrder.setVisibility(View.GONE);
+        }
         holder.cancelOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,7 +64,6 @@ public class OrderAdapter extends FirebaseRecyclerAdapter<OrderHelperClass, Orde
                 //deletes item from database and view
                 reference.child(key).removeValue();
 //                notifyDataSetChanged(); //to prevent IndexOutOfBoundException
-
             }
         });
     }
@@ -77,7 +79,7 @@ public class OrderAdapter extends FirebaseRecyclerAdapter<OrderHelperClass, Orde
     public class OrderViewHolder extends RecyclerView.ViewHolder {
 
         ImageView orderImage;
-        TextView orderName, orderAmount, orderQty;
+        TextView orderName, orderAmount, orderQty,orderStatus;
         LinearLayout cancelOrder;
 
         public OrderViewHolder(@NonNull View itemView) {
@@ -87,6 +89,7 @@ public class OrderAdapter extends FirebaseRecyclerAdapter<OrderHelperClass, Orde
             orderAmount = itemView.findViewById(R.id.orderAmount);
             orderQty = itemView.findViewById(R.id.orderQty);
             cancelOrder = itemView.findViewById(R.id.cancelOrder);
+            orderStatus = itemView.findViewById(R.id.orderStatus);
 
         }
     }
